@@ -5,9 +5,9 @@ add_executable(
 
 # Pull in our pico_stdlib which aggregates commonly used features
 message(">>> add comment to other cmakelists '# Pull in our pico_stdlib which aggregates commonly used features'")
-target_link_libraries(
-    print
+target_link_libraries(print
     pico_stdlib
+    hardware_adc
 )
 
 # enable usb output, disable uart output
