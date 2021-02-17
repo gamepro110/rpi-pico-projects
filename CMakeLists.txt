@@ -12,3 +12,4 @@ pico_sdk_init()
 # all projects below
 add_subdirectory(blink)
 add_subdirectory(print)
+add_subdirectory(slide_potentiometer)
