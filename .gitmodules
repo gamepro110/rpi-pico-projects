@@ -1,3 +1,6 @@
 [submodule "vendor/pico_sdk"]
 	path = vendor/pico_sdk
 	url = https://github.com/raspberrypi/pico-sdk.git
+[submodule "vendor/pico_tool"]
+	path = vendor/pico_tool
+	url = https://github.com/raspberrypi/picotool
