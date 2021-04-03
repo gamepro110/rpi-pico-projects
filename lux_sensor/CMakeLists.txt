@@ -1,19 +1,20 @@
+# lux for the internal led on pin 25
 add_executable(
-    print
-    print.cpp
+    lux
+    lux.cpp
 )
 
 # Pull in our pico_stdlib which aggregates commonly used features
 target_link_libraries(
-    print
+    lux
     PRIVATE
     pico_stdlib
-    hardware_adc
+    hardware_i2c
 )
 
 # enable usb output, disable uart output
-pico_enable_stdio_usb(print 1)
-pico_enable_stdio_uart(print 0)
+pico_enable_stdio_usb(lux 1)
+pico_enable_stdio_uart(lux 0)
 
 # create map/bin/hex/uf2 file etc.
-pico_add_extra_outputs(print)
+pico_add_extra_outputs(lux)
