@@ -21,7 +21,7 @@ int main() {
 
     if (!gy30Init()) {
         while (true) {
-            printf("\raddr: %d_%a failed to init.", meh, meh);
+            printf("\raddr: %d - %a failed to init.", meh, meh);
             sleep_ms(10000);
         }
     }
@@ -37,7 +37,7 @@ int main() {
 
 bool gy30Init() {
     sleep_ms(1000);
-    uint8_t reg = 0x00;
+    uint8_t reg = 0x23;
     uint8_t chipId[1];
     i2c_write_blocking(I2C_PORT, addr, &reg, 1, true);
     i2c_write_blocking(I2C_PORT, addr, chipId, 1, true);
