@@ -4,3 +4,6 @@
 [submodule "vendor/pico_tool"]
 	path = vendor/pico_tool
 	url = https://github.com/raspberrypi/picotool
+[submodule "vendor/libs/libSSD1306"]
+	path = vendor/libs/libSSD1306
+	url = git@github.com:AndrewFromMelbourne/libSSD1306.git
