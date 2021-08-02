@@ -21,6 +21,6 @@ int main() { // check why it doenst work
 void Core1Loop() {
     uint32_t in = multicore_fifo_pop_blocking();
     in++;
-    sleep_ms(200);
+    sleep_ms(1000);
     multicore_fifo_push_blocking(in);
 }

@@ -9,7 +9,7 @@ int main() {
     ssd1306 m_lcd{};
     stdio_init_all();
     i2c_init(0, 400000);
-    gpio_set_function()
+    //gpio_set_function()
     m_lcd.Init();
 
     while (true)

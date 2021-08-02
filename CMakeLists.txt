@@ -16,6 +16,7 @@ add_subdirectory(slide_potentiometer)
 add_subdirectory(lux_sensor)
 add_subdirectory(multi-core-example)
 add_subdirectory(ssd1306)
+add_subdirectory(steperMotor)
 
 # list of target libs
 # * pico_stdlib (standard lib, always include (unless u know what you`re doing))
