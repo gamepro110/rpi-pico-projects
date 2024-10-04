@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.16)
 
 # Inititialize pico-sdk from submodule
 # Note: This must happen before project()
@@ -9,6 +9,10 @@ project(rpi_pico_projects)
 #initialize the Raspberry Pi Pico SDK
 pico_sdk_init()
 
+set(vendorPath "${PROJECT_SOURCE_DIR}/vendor")
+
+add_subdirectory(vendor)
+
 # all projects below
 add_subdirectory(blink)
 add_subdirectory(print)
@@ -17,6 +21,7 @@ add_subdirectory(lux_sensor)
 add_subdirectory(multi-core-example)
 add_subdirectory(ssd1306)
 add_subdirectory(steperMotor)
+add_subdirectory(interupt_test)
 
 # list of target libs
 # * pico_stdlib (standard lib, always include (unless u know what you`re doing))
@@ -39,21 +44,21 @@ add_subdirectory(steperMotor)
 # * |-- queue
 
 # * hardware
-# * |--  adc
+# * |-- adc
 # * |-- base
 # * |-- claim
 # * |-- clocks
 # * |-- divider
 # * |-- dma
-# *    |-- channel_config
+# *     |-- channel_config
 # * |-- flash
 # * |-- gpio
 # * |-- i2c
 # * |-- interp
-# *    |-- interp_config
+# *     |-- interp_config
 # * |-- irq
 # * |-- pio
-# *    |-- sm_config
+# *     |-- sm_config
 # * |-- pll
 # * |-- pwm
 # * |-- resets
